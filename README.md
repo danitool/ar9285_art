@@ -6,7 +6,7 @@ from the AR9285 wireless chips:
 * Capabilities
 
 Tested with the "virtual" eeprom present in the Tplink WR741ND v2.4  
-router. The eeprom at this router lives in a partition called "art"
+router. The eeprom at this router lives in a partition called *art*
 
 Example:  
 Backup the partition under Openwrt
@@ -36,10 +36,12 @@ Now transfer art-hacked.bin to your router, and write it to art partition
 
 
 
-
-
-
-*Note:* The art partition must be writeable. As default it isn't in Openwrt, probably
+---
+  
+  
+  
+  
+**Note:** The art partition must be writeable. As default it isn't in Openwrt, probably
 you will need to build a custom firmware with this code:
 
 	parts[3].name = "art";
@@ -55,6 +57,6 @@ changed to
 	parts[3].mask_flags = 0;
 
 at file:  
-./target/linux/ar71xx/files/drivers/mtd/tplinkpart.c
+*./target/linux/ar71xx/files/drivers/mtd/tplinkpart.c*
 
 

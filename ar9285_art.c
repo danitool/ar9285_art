@@ -1,9 +1,10 @@
 /**
 	ath9k_caldata tools.
 	@author: Álvaro Fernández Rojas <noltari@gmail.com>
+	mod for AR9285 chips
 */
 
-#include "ath9k_caldata.h"
+#include "ar9285_art.h"
 
 int main(int argc, char** argv) {
 	char* in_caldata_name = NULL;

@@ -1,16 +1,15 @@
 # AR9285 art tool 
 
-With this tool you can tune a few parameters in the eeprom dump  
-from the AR9285 wireless chips:
+With this tool you can tune a few parameters in the eeprom dump from 
+the AR9285 wireless chips:
 * Regulatory domain
 * Capabilities
 
-Tested with the "virtual" eeprom present in the Tplink WR741ND v2.4  
+Tested with the "virtual" eeprom present in the Tplink WR741ND v2.4 
 router. The eeprom at this router lives in a partition called *art*
 
 Example:  
 Backup the partition under Openwrt
-
 ```
 root@OpenWrt:/# cat /proc/mtd
 dev:    size   erasesize  name
@@ -27,7 +26,7 @@ root@OpenWrt:/#
 
 Transfer art.bin to your computer, and hack it with the tool
 
-`[dani@tool ath9k_caldata]$ ./ath9k_caldata -i art.bin -o art-hacked.bin -r 255`
+`[dani@tool ath9k_caldata]$ ./ar9285_art -i art.bin -o art-hacked.bin -r 255`
 
 
 Now transfer art-hacked.bin to your router, and write it to art partition
@@ -37,10 +36,9 @@ Now transfer art-hacked.bin to your router, and write it to art partition
 
 
 ---
-  
-  
-  
-  
+
+    
+
 **Note:** The art partition must be writeable. As default it isn't in Openwrt, probably
 you will need to build a custom firmware with this code:
 

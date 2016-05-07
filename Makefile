@@ -1,11 +1,11 @@
-PROGS     = ath9k_caldata
+PROGS     = ar9285_art
 
 INSTDIR   = $(prefix)/bin/
 INSTMODE  = 0755
 INSTOWNER = root
 INSTGROUP = root
 
-OBJS = ath9k_caldata.o
+OBJS = ar9285_art.o
 
 all: $(PROGS)
 

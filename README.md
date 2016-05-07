@@ -11,7 +11,7 @@ router. The eeprom at this router lives in a partition called "art"
 Example:  
 Backup the partition under Openwrt
 
-```root@OpenWrt:/# cat /proc/mtd`
+```root@OpenWrt:/# cat /proc/mtd
 dev:    size   erasesize  name
 mtd0: 00020000 00010000 "u-boot"
 mtd1: 00104200 00010000 "kernel"
